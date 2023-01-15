@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "864101133640",
+    "project_id": "mimedicokotlin",
+    "storage_bucket": "mimedicokotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864101133640:android:69fd374e857e61b836577d",
+        "android_client_info": {
+          "package_name": "com.example.mimedicokotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864101133640-jsqo4o2v5s9kh7n5mhl1hadtb2pj9r12.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW8QvQwkfMLD6bplp906ATqnvGqrHKxbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864101133640-jsqo4o2v5s9kh7n5mhl1hadtb2pj9r12.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864101133640:android:4757e6628ea4662136577d",
+        "android_client_info": {
+          "package_name": "com.example.mimedicokotlinformedics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864101133640-jsqo4o2v5s9kh7n5mhl1hadtb2pj9r12.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW8QvQwkfMLD6bplp906ATqnvGqrHKxbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864101133640-jsqo4o2v5s9kh7n5mhl1hadtb2pj9r12.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

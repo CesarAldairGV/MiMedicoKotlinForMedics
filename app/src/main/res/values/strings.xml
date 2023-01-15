@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">MiMedicoKotlinForMedics</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login_label">Login</string>
+    <string name="login_text">Login</string>
+    <string name="login_email_text">Email:</string>
+    <string name="login_email_hint">johndoe@gmail.com</string>
+    <string name="login_email_err">Email must be valid</string>
+    <string name="login_password_text">Password:</string>
+    <string name="login_password_hint">CON95KER</string>
+    <string name="login_password_err">Password must be longer than 5 characters</string>
+    <string name="login_send">Login</string>
+    <string name="login_err1">Incorrect Credentials</string>
+    <string name="login_err2">Account Not Verified</string>
+
+    <string name="signup_banner">Registrarse</string>
+    <string name="signup_firstname_text">Nombres: </string>
+    <string name="signup_firstname_hint">John</string>
+    <string name="signup_firstname_err">El nombre no debe estar vacio</string>
+    <string name="signup_lastname_text">Apellidos: </string>
+    <string name="signup_lastname_hint">Doe</string>
+    <string name="signup_lastname_err">Los apellidos no debe estar vacio</string>
+    <string name="signup_email_text">Email: </string>
+    <string name="signup_email_hint">john@gmail.com</string>
+    <string name="signup_email_err">El email debe ser valido</string>
+    <string name="signup_curp_text">Curp: </string>
+    <string name="signup_curp_hint">JD212121JOLKOSKE1D</string>
+    <string name="signup_curp_err">El curp debe tener 18 caracteres</string>
+    <string name="signup_password_text">Contraseña: </string>
+    <string name="signup_password_hint">CON95KER</string>
+    <string name="signup_password_err">La contraseña debe ser mayor de 5 caracteres</string>
+    <string name="signup_school_text">Universidad: </string>
+    <string name="signup_school_hint">Universidad Autonoma de Nuevo Leon</string>
+    <string name="signup_school_err">Debe ser una universidad valida</string>
+    <string name="signup_certificate_text">Imagen de Certificado Medico: </string>
+    <string name="signup_certificate_button">Seleccionar</string>
+    <string name="signup_certificate_err">Es obligatorio seleccionar una imagen</string>
+    <string name="signup_photo_text">Foto del rostro: </string>
+    <string name="signup_photo_button">Seleccionar</string>
+    <string name="signup_photo_err">Es obligatorio seleccionar una imagen</string>
+    <string name="signup_continue">Continuar</string>
+    <string name="signup_button">Registrarse</string>
+
+    <string name="signup_err1">Ocurrio un error</string>
+
+    <string name="signup_success">Se registro correctamente, se le envio un email de confirmacion.</string>
+    <string name="title_activity_home">HomeActivity</string>
+</resources>

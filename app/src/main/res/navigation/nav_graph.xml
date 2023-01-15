@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.mimedicokotlinformedics.MainFragment"
+        android:label="Main Fragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_MainFragment_to_SignupFragment"
+            app:destination="@id/SignupFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.mimedicokotlinformedics.ui.login.LoginFragment"
+        android:label="Login Fragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_HomeActivity"
+            app:destination="@id/HomeActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/HomeActivity"
+        android:name="com.example.mimedicokotlinformedics.ui.home.HomeActivity"
+        android:label="Home Activity"
+        tools:layout="@layout/activity_home">
+    </activity>
+
+    <fragment
+        android:id="@+id/SignupFragment"
+        android:name="com.example.mimedicokotlinformedics.ui.signup.SignupFragment"
+        android:label="Signup Fragment"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_SignupFragment_to_SignupTwoFragment"
+            app:destination="@id/SignupTwoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SignupTwoFragment"
+        android:name="com.example.mimedicokotlinformedics.ui.signuptwo.SignupTwoFragment"
+        android:label="Signup Fragment"
+        tools:layout="@layout/fragment_signup_two">
+        <argument
+            android:name="firstname"
+            app:argType="string"/>
+        <argument
+            android:name="lastname"
+            app:argType="string"/>
+        <argument
+            android:name="email"
+            app:argType="string"/>
+        <argument
+            android:name="curp"
+            app:argType="string"/>
+        <argument
+            android:name="password"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_SignupTwoFragment_to_SignupSuccessFragment"
+            app:destination="@id/SignupSuccessFragment"
+            app:popUpTo="@id/MainFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/SignupSuccessFragment"
+        android:name="com.example.mimedicokotlinformedics.ui.signuptwo.SignupSuccessFragment"
+        android:label="Signup Success Fragment"
+        tools:layout="@layout/fragment_signup_success">
+    </fragment>
+</navigation>
