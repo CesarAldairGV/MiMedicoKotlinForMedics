@@ -32,7 +32,7 @@ class HomeViewModel @Inject constructor(
             name = "${this["firstname"]} ${this["lastname"]}",
             email = this["email", String::class.java]!!,
             curp = this["curp", String::class.java]!!,
-            school = this["curp", String::class.java]!!,
+            school = this["school", String::class.java]!!,
             certUrl = this["certUrl", String::class.java]!!,
             photoUrl = this["photoUrl", String::class.java]!!,
         )

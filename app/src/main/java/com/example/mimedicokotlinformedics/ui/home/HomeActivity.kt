@@ -11,10 +11,12 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.mimedicokotlinformedics.MainActivity
 import com.example.mimedicokotlinformedics.R
 import com.example.mimedicokotlinformedics.databinding.ActivityHomeBinding
 import com.example.mimedicokotlinformedics.hilt.App
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import io.grpc.InternalChannelz.id
 
@@ -37,6 +39,9 @@ class HomeActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_home)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        findViewById<BottomNavigationView>(R.id.home_navigation)
+            .setupWithNavController(navController)
 
         app = application as App
     }
