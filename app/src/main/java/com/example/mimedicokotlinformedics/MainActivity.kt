@@ -1,5 +1,6 @@
 package com.example.mimedicokotlinformedics
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import com.example.mimedicokotlinformedics.databinding.ActivityMainBinding
+import com.example.mimedicokotlinformedics.hilt.App
+import com.example.mimedicokotlinformedics.ui.home.HomeActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,6 +23,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if((application as App).getCurrentMedicId() != null){
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            return
+        }
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

@@ -51,8 +51,8 @@ class AuthService(
 
             firebaseAuth.signInWithEmailAndPassword(email,password)
 
-            val certUrl = storageService.uploadImg("medicFaces",photo)
-            val photoUrl = storageService.uploadImg("medicCerts",cert)
+            val certUrl = storageService.uploadImg("medicFaces",cert)
+            val photoUrl = storageService.uploadImg("medicCerts",photo)
 
             val userId = signupResult.user!!.uid
             signupResult.user!!.sendEmailVerification().await()
