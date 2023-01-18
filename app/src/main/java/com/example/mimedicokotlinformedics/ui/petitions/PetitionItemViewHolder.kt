@@ -28,7 +28,7 @@ class PetitionItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
         proposalButton.setOnClickListener{
             val bundle = bundleOf("petitionId" to petitionItem.petitionId)
-//            itemView.findNavController().navigate(R.id.action_PetitionsFragment_to_ProposalsFragment, bundle)
+            itemView.findNavController().navigate(R.id.action_PetitionsFragment_to_SendProposalFragment, bundle)
         }
     }
 }

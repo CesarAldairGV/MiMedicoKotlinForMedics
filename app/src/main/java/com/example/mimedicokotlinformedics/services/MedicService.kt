@@ -1,6 +1,7 @@
 package com.example.mimedicokotlinformedics.services
 
 import android.util.Log
+import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
@@ -43,7 +44,9 @@ class MedicService {
                     "curp" to curp,
                     "school" to school,
                     "photoUrl" to photoUrl,
-                    "certUrl" to certUrl
+                    "certUrl" to certUrl,
+                    "likes" to 0,
+                    "timestamp" to Timestamp.now().seconds
                 ))
                 .await()
             Log.d(tag,"New medic created successfully")

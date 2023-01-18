@@ -17,6 +17,19 @@
         android:name="com.example.mimedicokotlinformedics.ui.petitions.PetitionsFragment"
         android:label="@string/petitions_label"
         tools:layout="@layout/fragment_petitions">
+        <action
+            android:id="@+id/action_PetitionsFragment_to_SendProposalFragment"
+            app:destination="@id/SendProposalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SendProposalFragment"
+        android:name="com.example.mimedicokotlinformedics.ui.sendproposal.SendProposalFragment"
+        android:label="Send Proposal"
+        tools:layout="@layout/fragment_send_proposal">
+        <argument
+            android:name="petitionId"
+            app:argType="string"/>
     </fragment>
 
     <action

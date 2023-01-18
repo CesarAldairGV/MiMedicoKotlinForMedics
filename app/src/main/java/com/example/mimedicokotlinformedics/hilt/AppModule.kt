@@ -1,8 +1,6 @@
 package com.example.mimedicokotlinformedics.hilt
 
-import com.example.mimedicokotlinformedics.services.AuthService
-import com.example.mimedicokotlinformedics.services.MedicService
-import com.example.mimedicokotlinformedics.services.StorageService
+import com.example.mimedicokotlinformedics.services.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,4 +18,10 @@ class AppModule {
 
     @Provides
     fun providesAuthService() = AuthService(providesMedicService(), providesStorageService())
+
+    @Provides
+    fun providesPetitionService() = PetitionService()
+
+    @Provides
+    fun providesProposalService() = ProposalService(providesAuthService())
 }
