@@ -32,7 +32,9 @@ class MedicService {
                            curp: String,
                            school: String,
                            certUrl: String,
-                           photoUrl: String): Boolean{
+                           photoUrl: String,
+                            business: String,
+                            years: Int): Boolean{
         return try{
             Log.d(tag,"Creating a new medic...")
             FirebaseFirestore.getInstance().collection("medics")
@@ -46,7 +48,9 @@ class MedicService {
                     "photoUrl" to photoUrl,
                     "certUrl" to certUrl,
                     "likes" to 0,
-                    "timestamp" to Timestamp.now().seconds
+                    "timestamp" to Timestamp.now().seconds,
+                    "business" to business,
+                    "years" to years
                 ))
                 .await()
             Log.d(tag,"New medic created successfully")

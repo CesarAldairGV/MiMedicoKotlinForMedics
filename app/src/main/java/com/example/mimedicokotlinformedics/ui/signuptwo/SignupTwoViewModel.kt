@@ -1,6 +1,7 @@
 package com.example.mimedicokotlinformedics.ui.signuptwo
 
 import android.graphics.Bitmap
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -28,11 +29,20 @@ class SignupTwoViewModel @Inject constructor(
                password: String,
                school: String,
                cert: Bitmap,
-               photo: Bitmap){
+               photo: Bitmap,
+               business: String,
+               years: Int){
         viewModelScope.launch {
             _signupResult.value =
-                authService.signup(firstname, lastname, email, curp, password, school, cert, photo)
+                authService.signup(firstname, lastname, email, curp, password, school, cert, photo,business,years)
         }
+    }
+
+    private fun checkBusiness(business: String?): Boolean{
+        return business != null
+    }
+    private fun checkYears(years: Int?): Boolean{
+        return (years != null) && (years >= 1)
     }
 
     private fun checkCert(cert: Bitmap?): Boolean{
@@ -47,10 +57,12 @@ class SignupTwoViewModel @Inject constructor(
         return !school.isNullOrBlank()
     }
 
-    fun checkData(school: String,cert: Bitmap?,photo: Bitmap?){
+    fun checkData(school: String,cert: Bitmap?,photo: Bitmap?,business: String?, years: Int?){
         var certError: Int? = null
         var photoError: Int? = null
         var schoolError: Int? = null
+        var businessError: Int? = null
+        var yearsError: Int? = null
         var isDataValid = false
         if(!checkSchool(school)){
             schoolError = 1
@@ -61,9 +73,17 @@ class SignupTwoViewModel @Inject constructor(
         if(!checkPhoto(photo)){
             photoError = 1
         }
-        if(certError == null && photoError == null && schoolError == null){
+        if(!checkBusiness(business)){
+            businessError = 1
+        }
+        if(!checkYears(years)){
+            yearsError = 1
+        }
+        if(certError == null && photoError == null && schoolError == null
+            && yearsError == null && businessError == null){
             isDataValid = true
         }
-        _signupFormState.value = SignupTwoFormState(schoolError, certError,photoError,isDataValid)
+        _signupFormState.value = SignupTwoFormState(schoolError,
+            certError,photoError,businessError,yearsError,isDataValid)
     }
 }

@@ -41,7 +41,9 @@ class AuthService(
                        password: String,
                        school: String,
                        cert: Bitmap,
-                       photo: Bitmap): Boolean {
+                       photo: Bitmap,
+                       business: String,
+                       years: Int): Boolean {
         return try {
 
             val firebaseAuth = FirebaseAuth.getInstance()
@@ -56,7 +58,7 @@ class AuthService(
 
             val userId = signupResult.user!!.uid
             signupResult.user!!.sendEmailVerification().await()
-            medicService.createMedic(userId, firstname, lastname, email, curp,school,certUrl, photoUrl)
+            medicService.createMedic(userId, firstname, lastname, email, curp,school,certUrl, photoUrl, business,years)
             Log.d(tag,"Signup Successfully")
 
             firebaseAuth.signOut()

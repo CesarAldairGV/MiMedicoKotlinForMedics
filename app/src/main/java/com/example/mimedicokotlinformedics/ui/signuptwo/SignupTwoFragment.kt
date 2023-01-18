@@ -15,6 +15,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.mimedicokotlinformedics.R
 import com.example.mimedicokotlinformedics.databinding.FragmentSignupTwoBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.math.log
 
 @AndroidEntryPoint
 class SignupTwoFragment : Fragment() {
@@ -45,6 +46,12 @@ class SignupTwoFragment : Fragment() {
             if(it.schoolError != null){
                 binding.signupSchool.error = getString(R.string.signup_school_err)
             }
+            if(it.yearsError != null){
+                binding.signupYears.error = "Debe tener mas de un año de experiencia"
+            }
+            if(it.businessError != null){
+                binding.signupBussiness.error = "Debe ser una empresa valida"
+            }
 
             binding.signupButton.isEnabled = it.isDataValid
         }
@@ -58,6 +65,14 @@ class SignupTwoFragment : Fragment() {
         }
 
         binding.signupSchool.addTextChangedListener {
+            checkData()
+        }
+
+        binding.signupBussiness.addTextChangedListener {
+            checkData()
+        }
+
+        binding.signupYears.addTextChangedListener {
             checkData()
         }
 
@@ -88,14 +103,24 @@ class SignupTwoFragment : Fragment() {
             binding.signupSchool.text.toString(),
             (binding.signupCertificateImg.drawable as BitmapDrawable).bitmap,
             (binding.signupPhotoImg.drawable as BitmapDrawable).bitmap,
+            binding.signupBussiness.text.toString(),
+            Integer.parseInt(binding.signupYears.text.toString())
         )
     }
 
     private fun checkData(){
+        val numString = binding.signupYears.text.toString()
+        var num: Int? = if(numString.isEmpty()){
+            null
+        }else{
+            Integer.parseInt(numString)
+        }
         viewModel.checkData(
             binding.signupSchool.text.toString(),
             (binding.signupCertificateImg.drawable as? BitmapDrawable)?.bitmap,
             (binding.signupPhotoImg.drawable as? BitmapDrawable)?.bitmap,
+            binding.signupBussiness.text.toString(),
+            num
         )
     }
 
