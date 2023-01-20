@@ -32,6 +32,13 @@
             app:argType="string"/>
     </fragment>
 
+    <fragment
+        android:id="@+id/ConsultsFragment"
+        android:name="com.example.mimedicokotlinformedics.ui.consults.ConsultsFragment"
+        android:label="Consults Proposal"
+        tools:layout="@layout/fragment_consults">
+    </fragment>
+
     <action
         android:id="@+id/action_to_HomeFragment"
         app:destination="@id/HomeFragment" />
@@ -40,7 +47,7 @@
         android:id="@+id/action_to_PetitionsFragment"
         app:destination="@id/PetitionsFragment" />
 
-<!--    <action-->
-<!--        android:id="@+id/action_to_ConsultsFragment"-->
-<!--        app:destination="@id/ConsultsFragment" />-->
+    <action
+        android:id="@+id/action_to_ConsultsFragment"
+        app:destination="@id/ConsultsFragment" />
 </navigation>

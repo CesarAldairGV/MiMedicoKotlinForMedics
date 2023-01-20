@@ -25,7 +25,7 @@ class ProposalService(
                 "medicName" to "${medic!!["firstname"]} ${medic!!["lastname"]}",
                 "likes" to medic!!["likes"],
                 "medicId" to medic.id,
-                "petitioniId" to petitionId,
+                "petitionId" to petitionId,
                 "photoUrl" to medic!!["photoUrl"],
 
                 //Fix This
