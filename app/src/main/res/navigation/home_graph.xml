@@ -37,6 +37,19 @@
         android:name="com.example.mimedicokotlinformedics.ui.consults.ConsultsFragment"
         android:label="Consults Proposal"
         tools:layout="@layout/fragment_consults">
+        <action
+            android:id="@+id/action_ConsultsFragment_to_ChatFragment"
+            app:destination="@id/ChatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ChatFragment"
+        android:name="com.example.mimedicokotlinformedics.ui.chat.ChatFragment"
+        android:label="Consults Proposal"
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="consultId"
+            app:argType="string"/>
     </fragment>
 
     <action

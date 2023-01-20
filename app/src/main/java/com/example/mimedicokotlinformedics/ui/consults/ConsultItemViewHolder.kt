@@ -23,7 +23,7 @@ class ConsultItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
         chatButton.setOnClickListener {
             val bundle = bundleOf("consultId" to consultItem.consultId)
-//            itemView.findNavController().navigate(R.id.action_ConsultsFragment_to_ChatFragment,bundle)
+            itemView.findNavController().navigate(R.id.action_ConsultsFragment_to_ChatFragment,bundle)
         }
     }
 

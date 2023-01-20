@@ -24,4 +24,7 @@ class AppModule {
 
     @Provides
     fun providesProposalService() = ProposalService(providesAuthService())
+
+    @Provides
+    fun providesConsultService() = ConsultService()
 }
