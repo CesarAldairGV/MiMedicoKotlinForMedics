@@ -60,7 +60,7 @@ class SendProposalViewModel @Inject constructor(
         subject = this["subject",String::class.java]!!,
         body = this["body",String::class.java]!!,
         date = this["date",String::class.java]!!,
-        username = this["name",String::class.java]!!,
+        username = this["userName",String::class.java]!!,
         imgUrl = this["urlPhoto",String::class.java],
     )
 }

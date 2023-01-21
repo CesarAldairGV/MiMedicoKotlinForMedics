@@ -27,10 +27,8 @@ class ProposalService(
                 "medicId" to medic.id,
                 "petitionId" to petitionId,
                 "photoUrl" to medic!!["photoUrl"],
-
-                //Fix This
-                "bussiness" to "IMSS",
-                "yearsExp" to 10
+                "business" to medic!!["business"],
+                "yearsExp" to medic!!["yearsExp"]
             ))
             .await()
     }

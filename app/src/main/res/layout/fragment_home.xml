@@ -42,22 +42,24 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/home_photo"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:layout_marginStart="30dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="15dp"
+                    app:shapeAppearanceOverlay="@style/roundedImageView"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/home_profile_text"
                     tools:src="@tools:sample/avatars" />
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/home_cert"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
-                    android:layout_marginTop="30dp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    app:shapeAppearanceOverlay="@style/roundedImageView"
                     app:layout_constraintStart_toEndOf="@+id/home_photo"
                     app:layout_constraintTop_toBottomOf="@+id/home_profile_text"
                     tools:src="@tools:sample/avatars" />
@@ -67,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:text="@string/home_name"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/home_photo" />

@@ -50,7 +50,7 @@ class MedicService {
                     "likes" to 0,
                     "timestamp" to Timestamp.now().seconds,
                     "business" to business,
-                    "years" to years
+                    "yearsExp" to years
                 ))
                 .await()
             Log.d(tag,"New medic created successfully")

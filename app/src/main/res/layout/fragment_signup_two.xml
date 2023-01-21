@@ -7,14 +7,57 @@
     tools:context=".ui.signuptwo.SignupTwoFragment">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/signup_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/signup_banner"
+        android:text="@string/signup_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signup_business_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="@string/signup_business_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_text" />
+
+    <EditText
+        android:id="@+id/signup_business"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/signup_business_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_business_text" />
+
+    <TextView
+        android:id="@+id/signup_years_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/signup_years_text"
+        app:layout_constraintStart_toEndOf="@+id/signup_business"
+        app:layout_constraintTop_toBottomOf="@+id/signup_text" />
+
+    <EditText
+        android:id="@+id/signup_years"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/signup_years_hint"
+        android:hint="@string/signup_years_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signup_business"
+        app:layout_constraintTop_toBottomOf="@+id/signup_years_text" />
 
     <TextView
         android:id="@+id/singup_school_text"
@@ -24,7 +67,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/signup_school_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_bussiness" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_business" />
 
     <EditText
         android:id="@+id/signup_school"
@@ -92,8 +135,8 @@
 
     <ImageView
         android:id="@+id/signup_photo_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,48 +164,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_button" />
-
-    <TextView
-        android:id="@+id/signup_bussiness_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Empresa:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/signup_bussiness"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="IMSS"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_bussiness_text" />
-
-    <TextView
-        android:id="@+id/signup_years_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="Años de Experiencia: "
-        app:layout_constraintStart_toEndOf="@+id/signup_bussiness"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/signup_years"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="30dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="0"
-        android:hint="10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/signup_bussiness"
-        app:layout_constraintTop_toBottomOf="@+id/signup_years_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/signup_banner"
+        android:text="@string/signup_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +35,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/signup_firstname_hint"
-        android:text="John"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_firstname_text" />
@@ -59,7 +58,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/signup_lastname_hint"
-        android:text="Romero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_lastname_text" />
@@ -83,7 +81,6 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:hint="@string/signup_email_hint"
-        android:text="raygunmk0@gmail.com"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_email_text" />
@@ -107,7 +104,6 @@
         android:ems="10"
         android:inputType="text"
         android:hint="@string/signup_curp_hint"
-        android:text="JVRJ010119IJUHUUAS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_curp_text" />
@@ -131,7 +127,6 @@
         android:ems="10"
         android:inputType="textPassword"
         android:hint="@string/signup_password_hint"
-        android:text="pacman"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_password_text" />

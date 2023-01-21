@@ -50,7 +50,7 @@ class SignupTwoFragment : Fragment() {
                 binding.signupYears.error = "Debe tener mas de un año de experiencia"
             }
             if(it.businessError != null){
-                binding.signupBussiness.error = "Debe ser una empresa valida"
+                binding.signupBusiness.error = "Debe ser una empresa valida"
             }
 
             binding.signupButton.isEnabled = it.isDataValid
@@ -68,7 +68,7 @@ class SignupTwoFragment : Fragment() {
             checkData()
         }
 
-        binding.signupBussiness.addTextChangedListener {
+        binding.signupBusiness.addTextChangedListener {
             checkData()
         }
 
@@ -103,7 +103,7 @@ class SignupTwoFragment : Fragment() {
             binding.signupSchool.text.toString(),
             (binding.signupCertificateImg.drawable as BitmapDrawable).bitmap,
             (binding.signupPhotoImg.drawable as BitmapDrawable).bitmap,
-            binding.signupBussiness.text.toString(),
+            binding.signupBusiness.text.toString(),
             Integer.parseInt(binding.signupYears.text.toString())
         )
     }
@@ -119,7 +119,7 @@ class SignupTwoFragment : Fragment() {
             binding.signupSchool.text.toString(),
             (binding.signupCertificateImg.drawable as? BitmapDrawable)?.bitmap,
             (binding.signupPhotoImg.drawable as? BitmapDrawable)?.bitmap,
-            binding.signupBussiness.text.toString(),
+            binding.signupBusiness.text.toString(),
             num
         )
     }

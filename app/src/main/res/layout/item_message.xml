@@ -22,13 +22,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/item_msg_photo"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="1dp"
                 android:src="@drawable/ic_user1"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/item_msg_date" />
 

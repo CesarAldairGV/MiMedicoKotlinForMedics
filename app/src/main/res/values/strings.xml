@@ -1,17 +1,10 @@
 <resources>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="app_name">Mi Medico Para Medicos</string>
+
+    <string name="main_button1">No tengo una cuenta</string>
+    <string name="main_button2">Ya tengo una cuenta</string>
+
     <string name="title_activity_home">Perfil</string>
 
     <string name="menu_logout">Cerrar Sesion</string>
@@ -31,7 +24,7 @@
     <string name="login_err1">Incorrect Credentials</string>
     <string name="login_err2">Account Not Verified</string>
 
-    <string name="signup_banner">Registrarse</string>
+    <string name="signup_label">Registrarse</string>
     <string name="signup_firstname_text">Nombres: </string>
     <string name="signup_firstname_hint">John</string>
     <string name="signup_firstname_err">El nombre no debe estar vacio</string>
@@ -47,6 +40,12 @@
     <string name="signup_password_text">Contraseña: </string>
     <string name="signup_password_hint">CON95KER</string>
     <string name="signup_password_err">La contraseña debe ser mayor de 5 caracteres</string>
+    <string name="signup_business_text">Empresa: </string>
+    <string name="signup_business_hint">IMSS</string>
+    <string name="signup_business_err">Debe ser una empresa valida</string>
+    <string name="signup_years_text">Años de Experiencia: </string>
+    <string name="signup_years_hint">1</string>
+    <string name="signup_years_err">Debes tener mas de un año de experiencia</string>
     <string name="signup_school_text">Universidad: </string>
     <string name="signup_school_hint">Universidad Autonoma de Nuevo Leon</string>
     <string name="signup_school_err">Debe ser una universidad valida</string>
@@ -63,6 +62,7 @@
 
     <string name="signup_success">Se registro correctamente, se le envio un email de confirmacion.</string>
 
+    <string name="home_label">Mi Perfil</string>
     <string name="home_text">Mi Perfil</string>
     <string name="home_name">Nombre: </string>
     <string name="home_email">Email: </string>
@@ -76,32 +76,8 @@
     <string name="item_petition_body">Cuerpo</string>
     <string name="item_petition_button">Enviar Propuesta de consulta</string>
 
-    <string name="addp_label">Nueva Peticion</string>
-    <string name="addp_text">Nueva Peticion</string>
-    <string name="addp_subject">Caso</string>
-    <string name="addp_subject_err">Debe contener entre 5 y 30 caracteres</string>
-    <string name="addp_body">Resumen</string>
-    <string name="addp_body_err">Debe contener entre 30 y 280 caracteres</string>
-    <string name="addp_image">Imagen(Opcional)</string>
-    <string name="addp_image_button">Seleccionar Imagen</string>
-    <string name="addp_sended">Peticion enviada correctamente</string>
-    <string name="addp_err1">Ocurrio un error</string>
-
-    <string name="item_proposal_medicname">Medico</string>
-    <string name="item_proposal_date">Fecha</string>
-    <string name="item_proposal_button">Ver</string>
-
-    <string name="proposals_label">Propuestas</string>
-
-    <string name="proposal_label">Propuesta</string>
-    <string name="proposal_name">Nombre: </string>
-    <string name="proposal_years">Años de Experiencia: </string>
-    <string name="proposal_business">Empresa: </string>
-    <string name="proposal_school">Escuela: </string>
-    <string name="proposal_likes">0</string>
-    <string name="proposal_message">Mensaje: </string>
-    <string name="proposal_accept">Aceptar</string>
-    <string name="proposal_refuse">Rechazar</string>
+    <string name="sendp_label">Enviar propuesta</string>
+    <string name="sendp_text">Informacion de la peticion</string>
 
     <string name="send_img_text">¿Seguro quieres enviar la siguiente imagen?</string>
     <string name="send_img_cancel">Cancelar</string>

@@ -25,7 +25,7 @@
     <fragment
         android:id="@+id/SendProposalFragment"
         android:name="com.example.mimedicokotlinformedics.ui.sendproposal.SendProposalFragment"
-        android:label="Send Proposal"
+        android:label="@string/sendp_label"
         tools:layout="@layout/fragment_send_proposal">
         <argument
             android:name="petitionId"
@@ -35,7 +35,7 @@
     <fragment
         android:id="@+id/ConsultsFragment"
         android:name="com.example.mimedicokotlinformedics.ui.consults.ConsultsFragment"
-        android:label="Consults Proposal"
+        android:label="@string/consults_label"
         tools:layout="@layout/fragment_consults">
         <action
             android:id="@+id/action_ConsultsFragment_to_ChatFragment"
@@ -45,7 +45,7 @@
     <fragment
         android:id="@+id/ChatFragment"
         android:name="com.example.mimedicokotlinformedics.ui.chat.ChatFragment"
-        android:label="Consults Proposal"
+        android:label="@string/chat_label"
         tools:layout="@layout/fragment_chat">
         <argument
             android:name="consultId"

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/MainFragment"
         android:name="com.example.mimedicokotlinformedics.MainFragment"
-        android:label="Main Fragment"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_main">
 
         <action
@@ -32,14 +32,14 @@
     <activity
         android:id="@+id/HomeActivity"
         android:name="com.example.mimedicokotlinformedics.ui.home.HomeActivity"
-        android:label="Home Activity"
+        android:label="@string/title_activity_home"
         tools:layout="@layout/activity_home">
     </activity>
 
     <fragment
         android:id="@+id/SignupFragment"
         android:name="com.example.mimedicokotlinformedics.ui.signup.SignupFragment"
-        android:label="Signup Fragment"
+        android:label="@string/signup_label"
         tools:layout="@layout/fragment_signup">
         <action
             android:id="@+id/action_SignupFragment_to_SignupTwoFragment"
@@ -49,7 +49,7 @@
     <fragment
         android:id="@+id/SignupTwoFragment"
         android:name="com.example.mimedicokotlinformedics.ui.signuptwo.SignupTwoFragment"
-        android:label="Signup Fragment"
+        android:label="@string/signup_label"
         tools:layout="@layout/fragment_signup_two">
         <argument
             android:name="firstname"
@@ -75,7 +75,7 @@
     <fragment
         android:id="@+id/SignupSuccessFragment"
         android:name="com.example.mimedicokotlinformedics.ui.signuptwo.SignupSuccessFragment"
-        android:label="Signup Success Fragment"
+        android:label="@string/signup_label"
         tools:layout="@layout/fragment_signup_success">
     </fragment>
 </navigation>
