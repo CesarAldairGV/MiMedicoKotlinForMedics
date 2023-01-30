@@ -39,8 +39,10 @@ class LoginFragment : Fragment() {
         loginViewModel.loginResult.observe(viewLifecycleOwner){
             if(it.loginError == 1){
                 Toast.makeText(activity, getString(R.string.login_err2), Toast.LENGTH_LONG).show()
+                binding.loginProgress.visibility = View.GONE
             }else if(it.loginError == 2){
                 Toast.makeText(activity, getString(R.string.login_err1), Toast.LENGTH_LONG).show()
+                binding.loginProgress.visibility = View.GONE
             }
             if(it.loginSuccess){
                 findNavController().navigate(R.id.action_LoginFragment_to_HomeActivity)
