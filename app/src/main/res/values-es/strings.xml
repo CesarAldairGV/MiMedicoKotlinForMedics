@@ -1,0 +1,92 @@
+<resources>
+
+    <string name="app_name">Mi Medico Para Medicos</string>
+
+    <string name="main_button1">No tengo una cuenta</string>
+    <string name="main_button2">Ya tengo una cuenta</string>
+
+    <string name="title_activity_home">Perfil</string>
+
+    <string name="menu_logout">Cerrar Sesion</string>
+    <string name="menu_profile">Perfil</string>
+    <string name="menu_petitions">Peticiones</string>
+    <string name="menu_consults">Consultas</string>
+
+    <string name="login_label">Login</string>
+    <string name="login_text">Login</string>
+    <string name="login_email_text">Email:</string>
+    <string name="login_email_hint">johndoe@gmail.com</string>
+    <string name="login_email_err">Email must be valid</string>
+    <string name="login_password_text">Password:</string>
+    <string name="login_password_hint">CON95KER</string>
+    <string name="login_password_err">Password must be longer than 5 characters</string>
+    <string name="login_send">Login</string>
+    <string name="login_err1">Incorrect Credentials</string>
+    <string name="login_err2">Account Not Verified</string>
+
+    <string name="signup_label">Registrarse</string>
+    <string name="signup_firstname_text">Nombres: </string>
+    <string name="signup_firstname_hint">John</string>
+    <string name="signup_firstname_err">El nombre no debe estar vacio</string>
+    <string name="signup_lastname_text">Apellidos: </string>
+    <string name="signup_lastname_hint">Doe</string>
+    <string name="signup_lastname_err">Los apellidos no debe estar vacio</string>
+    <string name="signup_email_text">Email: </string>
+    <string name="signup_email_hint">john@gmail.com</string>
+    <string name="signup_email_err">El email debe ser valido</string>
+    <string name="signup_curp_text">Curp: </string>
+    <string name="signup_curp_hint">JD212121JOLKOSKE1D</string>
+    <string name="signup_curp_err">El curp debe tener 18 caracteres</string>
+    <string name="signup_password_text">Contraseña: </string>
+    <string name="signup_password_hint">CON95KER</string>
+    <string name="signup_password_err">La contraseña debe ser mayor de 5 caracteres</string>
+    <string name="signup_business_text">Empresa: </string>
+    <string name="signup_business_hint">IMSS</string>
+    <string name="signup_business_err">Debe ser una empresa valida</string>
+    <string name="signup_years_text">Años de Experiencia: </string>
+    <string name="signup_years_hint">1</string>
+    <string name="signup_years_err">Debes tener mas de un año de experiencia</string>
+    <string name="signup_school_text">Universidad: </string>
+    <string name="signup_school_hint">Universidad Autonoma de Nuevo Leon</string>
+    <string name="signup_school_err">Debe ser una universidad valida</string>
+    <string name="signup_certificate_text">Imagen de Certificado Medico: </string>
+    <string name="signup_certificate_button">Seleccionar</string>
+    <string name="signup_certificate_err">Es obligatorio seleccionar una imagen</string>
+    <string name="signup_photo_text">Foto del rostro: </string>
+    <string name="signup_photo_button">Seleccionar</string>
+    <string name="signup_photo_err">Es obligatorio seleccionar una imagen</string>
+    <string name="signup_continue">Continuar</string>
+    <string name="signup_button">Registrarse</string>
+
+    <string name="signup_err1">Ocurrio un error</string>
+
+    <string name="signup_success">Se registro correctamente, se le envio un email de confirmacion.</string>
+
+    <string name="home_label">Mi Perfil</string>
+    <string name="home_text">Mi Perfil</string>
+    <string name="home_name">Nombre: </string>
+    <string name="home_email">Email: </string>
+    <string name="home_curp">Curp: </string>
+    <string name="home_school">Universidad: </string>
+
+    <string name="petitions_label">Peticiones</string>
+
+    <string name="item_petition_subject">Tema</string>
+    <string name="item_petition_date">Fecha</string>
+    <string name="item_petition_body">Cuerpo</string>
+    <string name="item_petition_button">Enviar Propuesta de consulta</string>
+
+    <string name="sendp_label">Enviar propuesta</string>
+    <string name="sendp_text">Informacion de la peticion</string>
+
+    <string name="send_img_text">¿Seguro quieres enviar la siguiente imagen?</string>
+    <string name="send_img_cancel">Cancelar</string>
+    <string name="send_img_accept">Aceptar</string>
+
+    <string name="consults_label">Consultas</string>
+    <string name="consult_chat_button">Chat</string>
+
+    <string name="chat_label">Chat</string>
+    <string name="chat_message">Mensaje</string>
+
+</resources>
