@@ -47,7 +47,7 @@
     <string name="signup_years_hint">1</string>
     <string name="signup_years_err">You must have more than one year of experience</string>
     <string name="signup_school_text">College: </string>
-    <string name="signup_school_hint">Autonomous University of Nuevo Leon</string>
+    <string name="signup_school_hint">Universidad Autonoma de Nuevo Leon</string>
     <string name="signup_school_err">Must be a valid university</string>
     <string name="signup_certificate_text">Medical Certificate Image: </string>
     <string name="signup_certificate_button">Select</string>
@@ -74,7 +74,7 @@
     <string name="item_petition_subject">Item</string>
     <string name="item_petition_date">Date</string>
     <string name="item_petition_body">Body</string>
-    <string name="item_petition_button">Submit Query Proposal</string>
+    <string name="item_petition_button">Submit Consult Proposal</string>
 
     <string name="sendp_label">Send Proposal</string>
     <string name="sendp_text">Request information</string>
