@@ -78,6 +78,8 @@
 
     <string name="sendp_label">Enviar propuesta</string>
     <string name="sendp_text">Informacion de la peticion</string>
+    <string name="sendp_success">"Propuesta enviada correctamente"</string>
+    <string name="sendp_err">Ocurrio un error</string>
 
     <string name="send_img_text">¿Seguro quieres enviar la siguiente imagen?</string>
     <string name="send_img_cancel">Cancelar</string>

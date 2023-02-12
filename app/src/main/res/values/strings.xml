@@ -78,6 +78,8 @@
 
     <string name="sendp_label">Send Proposal</string>
     <string name="sendp_text">Request information</string>
+    <string name="sendp_success">"Proposal sent"</string>
+    <string name="sendp_err">An error as occurred</string>
 
     <string name="send_img_text">Are you sure you want to send the next image?</string>
     <string name="send_img_cancel">Cancel</string>

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
+import com.example.mimedicokotlinformedics.R
 import com.example.mimedicokotlinformedics.databinding.FragmentSendProposalBinding
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
@@ -54,9 +55,9 @@ class SendProposalFragment : Fragment() {
 
         viewModel.result.observe(viewLifecycleOwner){
             if(it){
-                Toast.makeText(context, "Propuesta enviada correctamente",Toast.LENGTH_LONG).show()
+                Toast.makeText(context, getString(R.string.sendp_success),Toast.LENGTH_LONG).show()
             }else{
-                Toast.makeText(context, "Ocurrio un error",Toast.LENGTH_LONG).show()
+                Toast.makeText(context, getString(R.string.sendp_err),Toast.LENGTH_LONG).show()
             }
             binding.sendpProgress2.visibility = View.GONE
         }
