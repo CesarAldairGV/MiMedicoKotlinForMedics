@@ -50,6 +50,22 @@
         <argument
             android:name="consultId"
             app:argType="string"/>
+        <action
+            android:id="@+id/action_ChatFragment_to_VideochatFragment"
+            app:destination="@id/VideochatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/VideochatFragment"
+        android:name="com.example.mimedicokotlinformedics.ui.videochat.VideochatFragment"
+        android:label="Videochat"
+        tools:layout="@layout/fragment_videochat" >
+        <argument
+            android:name="myUsername"
+            app:argType="string" />
+        <argument
+            android:name="peerUsername"
+            app:argType="string" />
     </fragment>
 
     <action
