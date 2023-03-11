@@ -3,6 +3,7 @@ package com.example.mimedicokotlinformedics.services
 import android.graphics.Bitmap
 import android.util.Log
 import com.google.firebase.Timestamp
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.coroutines.tasks.await
@@ -106,5 +107,12 @@ class ConsultService {
         val baos = ByteArrayOutputStream()
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
         return baos.toByteArray()
+    }
+
+    suspend fun getConsultData(consultId: String): DocumentSnapshot?{
+        return FirebaseFirestore.getInstance().collection("consults")
+            .document(consultId)
+            .get()
+            .await()
     }
 }

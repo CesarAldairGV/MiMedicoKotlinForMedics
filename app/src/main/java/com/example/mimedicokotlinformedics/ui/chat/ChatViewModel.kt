@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mimedicokotlinformedics.services.AuthService
 import com.example.mimedicokotlinformedics.services.ConsultService
+import com.google.firebase.firestore.DocumentSnapshot
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -21,6 +22,15 @@ class ChatViewModel @Inject constructor(
 
     private val _photoState: MutableLiveData<String> = MutableLiveData()
     val photoState: LiveData<String> get() = _photoState
+
+    private val _consultData: MutableLiveData<ConsultData> = MutableLiveData()
+    val consultData: LiveData<ConsultData> get() = _consultData
+
+    fun getConsultData(consultId: String){
+        viewModelScope.launch {
+            _consultData.value = consultService.getConsultData(consultId)!!.toConsultData()
+        }
+    }
 
     fun sendMessage(consultId: String, message: String, photoUrl: String){
         viewModelScope.launch {
@@ -39,4 +49,9 @@ class ChatViewModel @Inject constructor(
     fun checkMessage(message: String){
         _messageState.value = message.isNotEmpty()
     }
+
+    fun DocumentSnapshot.toConsultData() = ConsultData(
+        medicId = this["medicId",String::class.java]!!,
+        userId = this["userId",String::class.java]!!
+    )
 }

@@ -66,6 +66,9 @@
         <argument
             android:name="peerUsername"
             app:argType="string" />
+        <argument
+            android:name="consultId"
+            app:argType="string" />
     </fragment>
 
     <action
