@@ -5,14 +5,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mimedicokotlinformedics.services.AuthService
+import com.example.mimedicokotlinfirebase.dto.MedicLoginRequest
+import com.example.mimedicokotlinfirebase.services.MedicAuthService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(
-    private val authService: AuthService
+    private val authService: MedicAuthService
 ):ViewModel() {
     private val _loginForm = MutableLiveData<LoginFormState>()
     val loginForm : LiveData<LoginFormState> get() = _loginForm
@@ -40,7 +41,11 @@ class LoginViewModel @Inject constructor(
 
     fun login(email: String, password: String){
         viewModelScope.launch {
-            val res = authService.login(email,password)
+            val req = MedicLoginRequest(
+                email = email,
+                password = password
+            )
+            val res = authService.login(req)
             if(res == 0) _loginResult.value = LoginResult(loginSuccess = true)
             else _loginResult.value = LoginResult(loginError = res)
         }

@@ -4,15 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mimedicokotlinformedics.services.AuthService
-import com.example.mimedicokotlinformedics.services.ConsultService
+import com.example.mimedicokotlinfirebase.dto.SendChatMessageRequest
+import com.example.mimedicokotlinfirebase.services.ConsultService
+import com.example.mimedicokotlinfirebase.services.MedicAuthService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class ChatViewModel @Inject constructor(
-    private val authService: AuthService,
+    private val authService: MedicAuthService,
     private val consultService : ConsultService
 ) : ViewModel(){
 
@@ -24,14 +25,19 @@ class ChatViewModel @Inject constructor(
 
     fun sendMessage(consultId: String, message: String, photoUrl: String){
         viewModelScope.launch {
-            consultService.sendMessage(consultId,message, photoUrl)
+            val req = SendChatMessageRequest(
+                consultId = consultId,
+                message = message,
+                medicPhotoUrl = photoUrl
+            )
+            consultService.sendMessage(req)
         }
     }
 
     fun getMedicPhoto(){
         viewModelScope.launch {
             val medic = authService.getCurrentMedicInfo()!!
-            val photoUrl = medic["photoUrl",String::class.java]!!
+            val photoUrl = medic.photoUrl
             _photoState.value = photoUrl
         }
     }
