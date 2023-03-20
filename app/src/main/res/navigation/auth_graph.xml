@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/MainFragment">
+    app:startDestination="@id/AuthFragment">
 
     <fragment
-        android:id="@+id/MainFragment"
-        android:name="com.example.mimedicokotlinformedics.MainFragment"
+        android:id="@+id/AuthFragment"
+        android:name="com.example.mimedicokotlinformedics.AuthFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_main">
+        tools:layout="@layout/fragment_auth">
 
         <action
             android:id="@+id/action_MainFragment_to_SignupFragment"
@@ -52,7 +52,7 @@
         <action
             android:id="@+id/action_SignupTwoFragment_to_SignupSuccessFragment"
             app:destination="@id/SignupSuccessFragment"
-            app:popUpTo="@id/MainFragment"/>
+            app:popUpTo="@id/AuthFragment"/>
     </fragment>
 
     <fragment
@@ -74,8 +74,8 @@
 
     <activity
         android:id="@+id/HomeActivity"
-        android:name="com.example.mimedicokotlinformedics.ui.home.HomeActivity"
+        android:name="com.example.mimedicokotlinformedics.ui.home.MainActivity"
         android:label="@string/title_activity_home"
-        tools:layout="@layout/activity_home">
+        tools:layout="@layout/activity_main">
     </activity>
 </navigation>

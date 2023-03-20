@@ -5,27 +5,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
-import com.example.mimedicokotlinformedics.databinding.FragmentMainBinding
-import com.example.mimedicokotlinformedics.databinding.FragmentSignupBinding
+import com.example.mimedicokotlinformedics.databinding.FragmentAuthBinding
 
 
-class MainFragment : Fragment() {
+class AuthFragment : Fragment() {
 
-    private var _binding: FragmentMainBinding? = null
+    private var _binding: FragmentAuthBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentMainBinding.inflate(inflater, container, false)
+        _binding = FragmentAuthBinding.inflate(inflater, container, false)
 
-        binding.mainSignupBtn.setOnClickListener() {
+        binding.authSignupBtn.setOnClickListener() {
             findNavController().navigate(R.id.action_MainFragment_to_SignupFragment)
         }
-        binding.mainLoginBtn.setOnClickListener() {
+        binding.authLoginBtn.setOnClickListener() {
             findNavController().navigate(R.id.action_MainFragment_to_LoginFragment)
         }
 

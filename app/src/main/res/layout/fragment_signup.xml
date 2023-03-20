@@ -34,7 +34,6 @@
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="@string/signup_firstname_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_firstname_text" />
@@ -57,7 +56,6 @@
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="@string/signup_lastname_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_lastname_text" />
@@ -80,18 +78,17 @@
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:hint="@string/signup_email_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_email_text" />
 
     <TextView
-        android:id="@+id/signup_curp_text"
+        android:id="@+id/signup_phone_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text="@string/signup_curp_text"
+        android:text="@string/signup_phone_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_email" />
 
@@ -102,11 +99,10 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
-        android:inputType="text"
-        android:hint="@string/signup_curp_hint"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_curp_text" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_phone_text" />
 
     <TextView
         android:id="@+id/signup_password_text"
@@ -126,7 +122,6 @@
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="@string/signup_password_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_password_text" />

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MiMedicoKotlinForMedics"
         tools:targetApi="31">
         <activity
-            android:name=".ui.home.HomeActivity"
+            android:name=".ui.home.MainActivity"
             android:exported="false"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.MiMedicoKotlinForMedics.NoActionBar">
@@ -23,7 +23,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".AuthActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MiMedicoKotlinForMedics.NoActionBar">

@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_graph"
-    app:startDestination="@id/HomeFragment">
+    app:startDestination="@id/ProfileFragment">
 
     <fragment
-        android:id="@+id/HomeFragment"
-        android:name="com.example.mimedicokotlinformedics.ui.home.HomeFragment"
-        android:label="@string/home_text"
-        tools:layout="@layout/fragment_home">
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.mimedicokotlinformedics.ui.home.ProfileFragment"
+        android:label="@string/profile_text"
+        tools:layout="@layout/fragment_profile">
     </fragment>
 
     <fragment
@@ -51,16 +51,4 @@
             android:name="consultId"
             app:argType="string"/>
     </fragment>
-
-    <action
-        android:id="@+id/action_to_HomeFragment"
-        app:destination="@id/HomeFragment" />
-
-    <action
-        android:id="@+id/action_to_PetitionsFragment"
-        app:destination="@id/PetitionsFragment" />
-
-    <action
-        android:id="@+id/action_to_ConsultsFragment"
-        app:destination="@id/ConsultsFragment" />
 </navigation>

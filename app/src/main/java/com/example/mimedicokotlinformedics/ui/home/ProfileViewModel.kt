@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
+class ProfileViewModel @Inject constructor(
     private val medicService : MedicService,
     private val authService: MedicAuthService
 ): ViewModel() {

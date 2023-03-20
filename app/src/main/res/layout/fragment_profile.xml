@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/background"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.ProfileFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/home_card"
@@ -29,42 +29,42 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/home_profile_text"
+                    android:id="@+id/profile_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="30dp"
                     android:background="@drawable/textline"
-                    android:text="@string/home_text"
+                    android:text="@string/profile_text"
                     android:textSize="30dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/home_photo"
+                    android:id="@+id/profile_photo"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="15dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/home_profile_text"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_text"
                     app:shapeAppearanceOverlay="@style/roundedImageView"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/home_name_text"
+                    android:id="@+id/profile_name_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
-                    android:text="@string/home_name"
-                    app:layout_constraintStart_toEndOf="@+id/home_photo"
-                    app:layout_constraintTop_toBottomOf="@+id/home_profile_text" />
+                    android:text="@string/profile_name"
+                    app:layout_constraintStart_toEndOf="@+id/profile_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_text" />
 
                 <TextView
-                    android:id="@+id/home_name_field"
+                    android:id="@+id/profile_name_field"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -72,21 +72,21 @@
                     android:layout_marginEnd="30dp"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/home_photo"
-                    app:layout_constraintTop_toBottomOf="@+id/home_name_text" />
+                    app:layout_constraintStart_toEndOf="@+id/profile_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_name_text" />
 
                 <TextView
-                    android:id="@+id/home_email_text"
+                    android:id="@+id/profile_email_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="@string/home_email"
-                    app:layout_constraintStart_toEndOf="@+id/home_photo"
-                    app:layout_constraintTop_toBottomOf="@+id/home_name_field" />
+                    android:text="@string/profile_email"
+                    app:layout_constraintStart_toEndOf="@+id/profile_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_name_field" />
 
                 <TextView
-                    android:id="@+id/home_email_field"
+                    android:id="@+id/profile_email_field"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -94,21 +94,21 @@
                     android:layout_marginEnd="30dp"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/home_photo"
-                    app:layout_constraintTop_toBottomOf="@+id/home_email_text" />
+                    app:layout_constraintStart_toEndOf="@+id/profile_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_email_text" />
 
                 <TextView
-                    android:id="@+id/home_curp_text"
+                    android:id="@+id/profile_phone_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="@string/home_curp"
-                    app:layout_constraintStart_toEndOf="@+id/home_photo"
-                    app:layout_constraintTop_toBottomOf="@+id/home_email_field" />
+                    android:text="@string/profile_curp"
+                    app:layout_constraintStart_toEndOf="@+id/profile_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_email_field" />
 
                 <TextView
-                    android:id="@+id/home_curp_field"
+                    android:id="@+id/profile_phone_field"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -116,21 +116,21 @@
                     android:layout_marginEnd="30dp"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/home_photo"
-                    app:layout_constraintTop_toBottomOf="@+id/home_curp_text" />
+                    app:layout_constraintStart_toEndOf="@+id/profile_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_phone_text" />
 
                 <TextView
-                    android:id="@+id/home_school_text"
+                    android:id="@+id/profile_school_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="@string/home_school"
-                    app:layout_constraintStart_toEndOf="@+id/home_photo"
-                    app:layout_constraintTop_toBottomOf="@+id/home_curp_field" />
+                    android:text="@string/profile_school"
+                    app:layout_constraintStart_toEndOf="@+id/profile_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_phone_field" />
 
                 <TextView
-                    android:id="@+id/home_school_field"
+                    android:id="@+id/profile_school_field"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -138,11 +138,11 @@
                     android:layout_marginEnd="30dp"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/home_photo"
-                    app:layout_constraintTop_toBottomOf="@+id/home_school_text" />
+                    app:layout_constraintStart_toEndOf="@+id/profile_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_school_text" />
 
                 <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/home_cert"
+                    android:id="@+id/profile_cert"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_marginStart="30dp"
@@ -150,12 +150,12 @@
                     android:layout_marginBottom="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/home_cert_text"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_cert_text"
                     app:shapeAppearanceOverlay="@style/roundedImageView"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/home_separator"
+                    android:id="@+id/profile_separator"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
@@ -164,17 +164,17 @@
                     android:background="@drawable/textline"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/home_school_field" />
+                    app:layout_constraintTop_toBottomOf="@+id/profile_school_field" />
 
                 <TextView
-                    android:id="@+id/home_cert_text"
+                    android:id="@+id/profile_cert_text"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
-                    android:text="Mi Certificado:"
+                    android:text="@string/profile_cert"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/home_separator" />
+                    app:layout_constraintTop_toBottomOf="@+id/profile_separator" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

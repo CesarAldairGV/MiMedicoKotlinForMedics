@@ -28,6 +28,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
+                android:text="Title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,6 +39,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="2dp"
                 android:textSize="11sp"
+                android:text="Date"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/item_cons_subj" />
 
@@ -47,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
+                android:text="Username"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/item_cons_date" />
 
