@@ -1,6 +1,6 @@
 package com.example.mimedicokotlinformedics.hilt
 
-import com.example.mimedicokotlinformedics.services.*
+import com.example.mimedicokotlinfirebase.services.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,20 +11,29 @@ import dagger.hilt.components.SingletonComponent
 class AppModule {
 
     @Provides
-    fun providesMedicService() = MedicService()
+    fun providesUserService(): UserService = UserService()
 
     @Provides
-    fun providesStorageService() = StorageService()
+    fun providesMedicService(): MedicService = MedicService()
 
     @Provides
-    fun providesAuthService() = AuthService(providesMedicService(), providesStorageService())
+    fun providesStorageService(): StorageService = StorageService()
 
     @Provides
-    fun providesPetitionService() = PetitionService()
+    fun providesMedicAuthService(): MedicAuthService = MedicAuthService(providesMedicService(),providesStorageService())
 
     @Provides
-    fun providesProposalService() = ProposalService(providesAuthService())
+    fun providesPetitionService(): PetitionService =
+        PetitionService(providesUserService(), providesStorageService())
 
     @Provides
-    fun providesConsultService() = ConsultService()
+    fun providesConsultService(): ConsultService = ConsultService(providesStorageService())
+
+    @Provides
+    fun providesProposalService(): ProposalService =
+        ProposalService(providesMedicService(),providesConsultService(),providesPetitionService())
+
+    @Provides
+    fun providesCommentService(): CommentService =
+        CommentService(providesUserService(), providesConsultService())
 }

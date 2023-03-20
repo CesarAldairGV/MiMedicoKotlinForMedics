@@ -10,7 +10,7 @@
     <string name="menu_logout">Log Out</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_petitions">Petitions</string>
-    <string name="menu_consults">Consults</string>
+    <string name="menu_consults">Consultancies</string>
 
     <string name="login_label">Login</string>
     <string name="login_text">Login</string>
@@ -25,29 +25,22 @@
     <string name="login_err2">Account Not Verified</string>
 
     <string name="signup_label">Sign Up</string>
-    <string name="signup_firstname_text">First names: </string>
-    <string name="signup_firstname_hint">John</string>
+    <string name="signup_firstname_text">Firstname: </string>
     <string name="signup_firstname_err">Name must not be empty</string>
-    <string name="signup_lastname_text">Last Name: </string>
-    <string name="signup_lastname_hint">Doe</string>
+    <string name="signup_lastname_text">Lastname: </string>
     <string name="signup_lastname_err">Last name must not be empty</string>
     <string name="signup_email_text">Email: </string>
-    <string name="signup_email_hint">john@gmail.com</string>
     <string name="signup_email_err">Email must be valid</string>
-    <string name="signup_curp_text">Curp: </string>
-    <string name="signup_curp_hint">JD212121JOLKOSKE1D</string>
-    <string name="signup_curp_err">The curp must be 18 characters long</string>
+    <string name="signup_phone_text">Phone: </string>
+    <string name="signup_phone_err">The phone must be 10 digits</string>
     <string name="signup_password_text">Password: </string>
-    <string name="signup_password_hint">CON95KER</string>
     <string name="signup_password_err">Password must be longer than 5 characters</string>
     <string name="signup_business_text">Company: </string>
-    <string name="signup_business_hint">IMSS</string>
     <string name="signup_business_err">Must be a valid company</string>
     <string name="signup_years_text">Years of Experience: </string>
     <string name="signup_years_hint">1</string>
     <string name="signup_years_err">You must have more than one year of experience</string>
     <string name="signup_school_text">College: </string>
-    <string name="signup_school_hint">Universidad Autonoma de Nuevo Leon</string>
     <string name="signup_school_err">Must be a valid university</string>
     <string name="signup_certificate_text">Medical Certificate Image: </string>
     <string name="signup_certificate_button">Select</string>
@@ -62,18 +55,15 @@
 
     <string name="signup_success">Successful registration, a confirmation email was sent to you.</string>
 
-    <string name="home_label">My Profile</string>
-    <string name="home_text">My Profile</string>
-    <string name="home_name">Name: </string>
-    <string name="home_email">Email: </string>
-    <string name="home_curp">Curp: </string>
-    <string name="home_school">College: </string>
+    <string name="profile_label">My Profile</string>
+    <string name="profile_text">My Profile</string>
+    <string name="profile_name">Name: </string>
+    <string name="profile_email">Email: </string>
+    <string name="profile_curp">Curp: </string>
+    <string name="profile_school">College: </string>
+    <string name="profile_cert">Cert: </string>
 
     <string name="petitions_label">Petitions</string>
-
-    <string name="item_petition_subject">Item</string>
-    <string name="item_petition_date">Date</string>
-    <string name="item_petition_body">Body</string>
     <string name="item_petition_button">Submit Consult Proposal</string>
 
     <string name="sendp_label">Send Proposal</string>
@@ -85,7 +75,7 @@
     <string name="send_img_cancel">Cancel</string>
     <string name="send_img_accept">Accept</string>
 
-    <string name="consults_label">Consults</string>
+    <string name="consults_label">Consultancies</string>
     <string name="consult_chat_button">Chat</string>
 
     <string name="chat_label">Chat</string>

@@ -6,14 +6,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mimedicokotlinformedics.services.AuthService
+import com.example.mimedicokotlinfirebase.dto.MedicSignupRequest
+import com.example.mimedicokotlinfirebase.services.MedicAuthService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class SignupTwoViewModel @Inject constructor(
-    private val authService: AuthService
+    private val authService: MedicAuthService
 ): ViewModel() {
 
     private val _signupFormState: MutableLiveData<SignupTwoFormState> = MutableLiveData()
@@ -33,8 +34,18 @@ class SignupTwoViewModel @Inject constructor(
                business: String,
                years: Int){
         viewModelScope.launch {
+            val req = MedicSignupRequest(
+                firstName = firstname,
+                lastName = lastname,
+                email = email,
+                phone = curp,
+                password = password,
+                school = school,
+                business = business,
+                yearsExp = years
+            )
             _signupResult.value =
-                authService.signup(firstname, lastname, email, curp, password, school, cert, photo,business,years)
+                authService.signup(req,cert,photo)
         }
     }
 

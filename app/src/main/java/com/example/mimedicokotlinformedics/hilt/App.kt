@@ -1,18 +1,17 @@
 package com.example.mimedicokotlinformedics.hilt
 
 import android.app.Application
-import com.example.mimedicokotlinformedics.services.AuthService
-import com.example.mimedicokotlinformedics.services.MedicService
+import com.example.mimedicokotlinfirebase.services.MedicAuthService
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
 @HiltAndroidApp
 class App : Application() {
     @Inject
-    lateinit var authService: AuthService
+    lateinit var authService: MedicAuthService
 
     fun getCurrentMedicId(): String?{
-        return authService.getCurrentMedic()?.uid
+        return authService.getCurrentMedicId()
     }
 
     fun logout(){

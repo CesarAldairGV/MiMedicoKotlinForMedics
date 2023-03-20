@@ -4,9 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mimedicokotlinformedics.services.PetitionService
-import com.example.mimedicokotlinformedics.services.ProposalService
-import com.google.firebase.firestore.DocumentSnapshot
+import com.example.mimedicokotlinfirebase.dto.CreateProposalRequest
+import com.example.mimedicokotlinfirebase.dto.Petition
+import com.example.mimedicokotlinfirebase.services.MedicAuthService
+import com.example.mimedicokotlinfirebase.services.PetitionService
+import com.example.mimedicokotlinfirebase.services.ProposalService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -14,7 +16,8 @@ import javax.inject.Inject
 @HiltViewModel
 class SendProposalViewModel @Inject constructor(
     private val proposalService: ProposalService,
-    private val petitionService: PetitionService
+    private val petitionService: PetitionService,
+    private val medicAuthService: MedicAuthService
 ) : ViewModel() {
 
     private val _formState: MutableLiveData<SendProposalFormState> = MutableLiveData()
@@ -51,16 +54,21 @@ class SendProposalViewModel @Inject constructor(
 
     fun sendProposal(petitionId: String, message: String){
         viewModelScope.launch {
-            proposalService.sendProposal(petitionId, message)
+            val req = CreateProposalRequest(
+                petitionId = petitionId,
+                message = message,
+                medicId = medicAuthService.getCurrentMedicId()!!
+            )
+            proposalService.createProposal(req)
             _result.value = true
         }
     }
 
-    private fun DocumentSnapshot.toSendProposalPetitionInfo() = SendProposalPetitionInfo(
-        subject = this["subject",String::class.java]!!,
-        body = this["body",String::class.java]!!,
-        date = this["date",String::class.java]!!,
-        username = this["userName",String::class.java]!!,
-        imgUrl = this["urlPhoto",String::class.java],
+    private fun Petition.toSendProposalPetitionInfo() = SendProposalPetitionInfo(
+        subject = this.title,
+        body = this.body,
+        date = this.date,
+        username = this.userName,
+        imgUrl = this.imgUrl,
     )
 }

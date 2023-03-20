@@ -43,10 +43,10 @@ class PetitionsAdapter(options: FirestoreRecyclerOptions<PetitionItem>):
         private fun DocumentSnapshot.toPetitionItem(): PetitionItem{
             return PetitionItem(
                 petitionId = this.id,
-                subject = this["subject", String::class.java]!!,
+                subject = this["title", String::class.java]!!,
                 date = this["date", String::class.java]!!,
                 body = this["body", String::class.java]!!,
-                urlPhoto = this["urlPhoto", String::class.java]
+                urlPhoto = this["photoUrl", String::class.java]
             )
         }
     }

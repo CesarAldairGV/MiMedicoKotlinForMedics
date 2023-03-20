@@ -5,38 +5,36 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.mimedicokotlinformedics.MainActivity
+import com.example.mimedicokotlinformedics.AuthActivity
 import com.example.mimedicokotlinformedics.R
-import com.example.mimedicokotlinformedics.databinding.ActivityHomeBinding
+import com.example.mimedicokotlinformedics.databinding.ActivityMainBinding
 import com.example.mimedicokotlinformedics.hilt.App
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
-import io.grpc.InternalChannelz.id
 
 @AndroidEntryPoint
-class HomeActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityHomeBinding
+    private lateinit var binding: ActivityMainBinding
 
     private lateinit var app: App
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityHomeBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+        setSupportActionBar(binding.mainToolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_home)
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
@@ -53,7 +51,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_home)
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
@@ -62,7 +60,7 @@ class HomeActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.action_logout -> {
                 app.logout()
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, AuthActivity::class.java)
                 startActivity(intent)
                 finish()
                 true

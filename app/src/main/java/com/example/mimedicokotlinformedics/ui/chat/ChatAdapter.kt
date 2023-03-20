@@ -55,7 +55,7 @@ class ChatAdapter(val recyclerView: RecyclerView, options: FirestoreRecyclerOpti
         private fun DocumentSnapshot.toMessageItem(): MessageItem =
             MessageItem(
                 message = this["message", String::class.java],
-                photoUrl = this["photoUrl", String::class.java],
+                photoUrl = this["medicPhotoUrl", String::class.java],
                 imgUrl = this["imgUrl", String::class.java],
                 date = this["date", String::class.java]!!
             )

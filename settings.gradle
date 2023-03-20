@@ -13,4 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MiMedicoKotlinForMedics"
-include ':app'
+include ':app',':firebase-services'
+project(':firebase-services').projectDir = file('C:\\Users\\aldai\\Projects\\MiMedicoKotlinFirebase\\firebase-services')
