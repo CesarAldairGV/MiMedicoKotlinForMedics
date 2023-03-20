@@ -57,11 +57,11 @@ class SignupTwoFragment : Fragment() {
         }
 
         viewModel.signupResult.observe(viewLifecycleOwner){
+            binding.signupProgress.visibility = View.GONE
             if(it){
                 findNavController().navigate(R.id.action_SignupTwoFragment_to_SignupSuccessFragment)
             }else{
                 Toast.makeText(context, getString(R.string.signup_err1), Toast.LENGTH_LONG).show()
-                binding.signupProgress.visibility = View.GONE
             }
         }
 

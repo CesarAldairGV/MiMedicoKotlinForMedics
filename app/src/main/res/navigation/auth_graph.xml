@@ -65,7 +65,7 @@
     <fragment
         android:id="@+id/LoginFragment"
         android:name="com.example.mimedicokotlinformedics.ui.login.LoginFragment"
-        android:label="Login Fragment"
+        android:label="@string/login_label"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_LoginFragment_to_HomeActivity"

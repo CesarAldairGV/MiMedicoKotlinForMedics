@@ -12,8 +12,8 @@
     <string name="menu_petitions">Peticiones</string>
     <string name="menu_consults">Asesorias</string>
 
-    <string name="login_label">Login</string>
-    <string name="login_text">Login</string>
+    <string name="login_label">Iniciar Sesion</string>
+    <string name="login_text">Iniciar Sesion</string>
     <string name="login_email_text">Email:</string>
     <string name="login_email_err">Email must be valid</string>
     <string name="login_password_text">Password:</string>
@@ -61,7 +61,6 @@
     <string name="profile_school">Universidad: </string>
     <string name="profile_cert">Certificado: </string>
 
-
     <string name="petitions_label">Peticiones</string>
     <string name="item_petition_button">Enviar Propuesta de consulta</string>
 
@@ -79,5 +78,6 @@
 
     <string name="chat_label">Chat</string>
     <string name="chat_message">Mensaje</string>
+    <string name="chat_username_text">Usuario: </string>
 
 </resources>

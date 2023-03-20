@@ -56,6 +56,7 @@ class SendProposalFragment : Fragment() {
         viewModel.result.observe(viewLifecycleOwner){
             if(it){
                 Toast.makeText(context, getString(R.string.sendp_success),Toast.LENGTH_LONG).show()
+                binding.sendpMessage.text.clear()
             }else{
                 Toast.makeText(context, getString(R.string.sendp_err),Toast.LENGTH_LONG).show()
             }

@@ -78,5 +78,6 @@
 
     <string name="chat_label">Chat</string>
     <string name="chat_message">Message</string>
+    <string name="chat_username_text">User: </string>
 
 </resources>

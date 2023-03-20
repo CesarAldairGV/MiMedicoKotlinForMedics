@@ -34,7 +34,7 @@ class LoginViewModel @Inject constructor(
         var passwordError: Int? = null
         var isDataValid = false
         if(!checkEmail(email)) emailError = 1
-        if(!checkPassword(password)) passwordError = 1
+//        if(!checkPassword(password)) passwordError = 1
         if(emailError == null && passwordError == null) isDataValid = true
         _loginForm.value = LoginFormState(emailError, passwordError, isDataValid)
     }
