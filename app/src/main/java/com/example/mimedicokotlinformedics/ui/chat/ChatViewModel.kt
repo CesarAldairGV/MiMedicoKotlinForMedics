@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.mimedicokotlinfirebase.dto.Consult
 import com.example.mimedicokotlinfirebase.dto.SendChatMessageRequest
 import com.example.mimedicokotlinfirebase.services.ConsultService
 import com.example.mimedicokotlinfirebase.services.MedicAuthService
@@ -22,6 +23,9 @@ class ChatViewModel @Inject constructor(
 
     private val _photoState: MutableLiveData<String> = MutableLiveData()
     val photoState: LiveData<String> get() = _photoState
+
+    private val _consultData: MutableLiveData<ConsultData> = MutableLiveData()
+    val consultData: LiveData<ConsultData> get() = _consultData
 
     fun sendMessage(consultId: String, message: String, photoUrl: String){
         viewModelScope.launch {
@@ -45,4 +49,20 @@ class ChatViewModel @Inject constructor(
     fun checkMessage(message: String){
         _messageState.value = message.isNotEmpty()
     }
+
+    fun getConsultData(consultId: String){
+        viewModelScope.launch {
+            _consultData.value = consultService.getConsultById(consultId)?.toConsultData()
+        }
+    }
+
+    fun Consult.toConsultData() = ConsultData(
+        consultId = this.consultId,
+        title = this.title,
+        body = this.body,
+        imgUrl = this.imgUrl,
+        userName = this.userName,
+        userId = this.userId,
+        medicId = this.userId
+    )
 }

@@ -10,6 +10,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mimedicokotlinformedics.databinding.FragmentChatBinding
+import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -64,6 +65,19 @@ class ChatFragment : Fragment() {
             }
         }
 
+        viewModel.consultData.observe(viewLifecycleOwner){
+            if(it != null){
+                binding.chatSubj.text = it.title
+                binding.chatBody.text = it.body
+                binding.chatUser.text = it.userName
+                if(it.imgUrl != null){
+                    binding.chatImg.visibility = View.VISIBLE
+                    Picasso.get().load(it.imgUrl).into(binding.chatImg)
+                    binding.chatImg.visibility = View.VISIBLE
+                }
+            }
+        }
+
         binding.chatMsgSend.setOnClickListener {
             viewModel.sendMessage(consultId, binding.chatMsgField.text.toString(),photoUrl)
             binding.chatMsgField.text.clear()
@@ -78,7 +92,7 @@ class ChatFragment : Fragment() {
         }
 
         viewModel.getMedicPhoto()
-
+        viewModel.getConsultData(consultId)
         binding.chatMsgSend.isEnabled = false
         return binding.root
     }
