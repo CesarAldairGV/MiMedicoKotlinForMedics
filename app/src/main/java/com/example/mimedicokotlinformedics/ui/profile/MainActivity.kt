@@ -1,4 +1,4 @@
-package com.example.mimedicokotlinformedics.ui.home
+package com.example.mimedicokotlinformedics.ui.profile
 
 import android.content.Intent
 import android.os.Bundle

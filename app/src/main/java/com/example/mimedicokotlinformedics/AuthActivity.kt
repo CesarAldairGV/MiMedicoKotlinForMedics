@@ -9,7 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.mimedicokotlinformedics.databinding.ActivityAuthBinding
 import com.example.mimedicokotlinformedics.hilt.App
-import com.example.mimedicokotlinformedics.ui.home.MainActivity
+import com.example.mimedicokotlinformedics.ui.profile.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,6 +23,7 @@ class AuthActivity : AppCompatActivity() {
 
         if((application as App).getCurrentMedicId() != null){
             val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
             return
         }

@@ -69,12 +69,12 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_LoginFragment_to_HomeActivity"
-            app:destination="@id/HomeActivity" />
+            app:destination="@id/MainActivity" />
     </fragment>
 
     <activity
-        android:id="@+id/HomeActivity"
-        android:name="com.example.mimedicokotlinformedics.ui.home.MainActivity"
+        android:id="@+id/MainActivity"
+        android:name="com.example.mimedicokotlinformedics.ui.profile.MainActivity"
         android:label="@string/title_activity_home"
         tools:layout="@layout/activity_main">
     </activity>

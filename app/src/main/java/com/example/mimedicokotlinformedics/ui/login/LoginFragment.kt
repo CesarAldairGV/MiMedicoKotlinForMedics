@@ -1,5 +1,6 @@
 package com.example.mimedicokotlinformedics.ui.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,9 +9,9 @@ import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.example.mimedicokotlinformedics.R
 import com.example.mimedicokotlinformedics.databinding.FragmentLoginBinding
+import com.example.mimedicokotlinformedics.ui.profile.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -45,7 +46,9 @@ class LoginFragment : Fragment() {
                 binding.loginProgress.visibility = View.GONE
             }
             if(it.loginSuccess){
-                findNavController().navigate(R.id.action_LoginFragment_to_HomeActivity)
+                val intent = Intent(context, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                startActivity(intent)
             }
         }
 

@@ -20,7 +20,7 @@
         android:theme="@style/Theme.MiMedicoKotlinForMedics"
         tools:targetApi="31">
         <activity
-            android:name=".ui.home.MainActivity"
+            android:name=".ui.profile.MainActivity"
             android:exported="false"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.MiMedicoKotlinForMedics.NoActionBar">
