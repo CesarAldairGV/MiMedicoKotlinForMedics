@@ -57,17 +57,20 @@
 
     <fragment
         android:id="@+id/VideochatFragment"
-        android:name="com.example.mimedicokotlinformedics.ui.videochat.VideochatFragment"
+        android:name="com.example.mimedicokotlinvideochat.ui.VideochatFragment"
         android:label="Videochat"
         tools:layout="@layout/fragment_videochat" >
         <argument
-            android:name="myUsername"
+            android:name="myId"
             app:argType="string" />
         <argument
-            android:name="peerUsername"
+            android:name="peerId"
             app:argType="string" />
         <argument
             android:name="consultId"
+            app:argType="string" />
+        <argument
+            android:name="peerName"
             app:argType="string" />
     </fragment>
 </navigation>

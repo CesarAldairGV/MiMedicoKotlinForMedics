@@ -35,12 +35,13 @@ class ChatFragment : Fragment() {
     private lateinit var consultId: String
     private lateinit var userId: String
     private lateinit var medicId: String
+    private lateinit var userName: String
 
     private lateinit var photoUrl: String
 
     private val permissions = arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
 
-    val requestPermissionLauncher =
+    private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()){
             val count = it.values.stream().filter{ it }.count()
             if(count == 2L){
@@ -78,11 +79,6 @@ class ChatFragment : Fragment() {
         binding.chatMsgList.layoutManager = linearLayoutManager
         binding.chatMsgList.adapter = adapter
 
-        viewModel.consultData.observe(viewLifecycleOwner){
-            userId = it.userId
-            medicId = it.medicId
-        }
-
         viewModel.messageState.observe(viewLifecycleOwner){
             binding.chatMsgSend.isEnabled = it
         }
@@ -103,6 +99,13 @@ class ChatFragment : Fragment() {
                     Picasso.get().load(it.imgUrl).into(binding.chatImg)
                     binding.chatImg.visibility = View.VISIBLE
                 }
+
+                userId = it.userId
+                medicId = it.medicId
+                consultId = it.consultId
+                userName = it.userName
+
+                binding.chatVideochat.isEnabled = true
             }
         }
 
@@ -123,7 +126,11 @@ class ChatFragment : Fragment() {
             if(!checkPermissions()){
                 requestPermissionLauncher.launch(permissions)
             }else{
-                val bundle = bundleOf("myUsername" to medicId, "peerUsername" to userId, "consultId" to consultId)
+                val bundle = bundleOf(
+                    "myUsername" to medicId,
+                    "peerUsername" to userId,
+                    "consultId" to consultId,
+                    "peerName" to userName)
                 findNavController().navigate(R.id.action_ChatFragment_to_VideochatFragment, bundle)
             }
 
