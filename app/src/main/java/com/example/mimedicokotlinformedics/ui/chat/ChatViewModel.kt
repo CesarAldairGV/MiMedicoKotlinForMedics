@@ -58,13 +58,13 @@ class ChatViewModel @Inject constructor(
         }
     }
 
-    fun Consult.toConsultData() = ConsultData(
+    private fun Consult.toConsultData() = ConsultData(
         consultId = this.consultId,
         title = this.title,
         body = this.body,
         imgUrl = this.imgUrl,
         userName = this.userName,
         userId = this.userId,
-        medicId = this.userId
+        medicId = this.medicId
     )
 }
