@@ -22,6 +22,9 @@ class ChatViewModel @Inject constructor(
     private val _messageState: MutableLiveData<Boolean> = MutableLiveData()
     val messageState: LiveData<Boolean> get() = _messageState
 
+    private val _finalizeState: MutableLiveData<Boolean> = MutableLiveData()
+    val finalizeState: LiveData<Boolean> get() = _finalizeState
+
     private val _photoState: MutableLiveData<String> = MutableLiveData()
     val photoState: LiveData<String> get() = _photoState
 
@@ -58,6 +61,12 @@ class ChatViewModel @Inject constructor(
         }
     }
 
+    fun finalizeConsult(consultId: String){
+        viewModelScope.launch {
+            _finalizeState.value = consultService.finalizeConsult(consultId)
+        }
+    }
+
     private fun Consult.toConsultData() = ConsultData(
         consultId = this.consultId,
         title = this.title,
@@ -65,6 +74,7 @@ class ChatViewModel @Inject constructor(
         imgUrl = this.imgUrl,
         userName = this.userName,
         userId = this.userId,
-        medicId = this.medicId
+        medicId = this.medicId,
+        finished = this.finished
     )
 }

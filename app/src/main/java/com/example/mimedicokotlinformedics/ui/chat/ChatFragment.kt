@@ -1,13 +1,16 @@
 package com.example.mimedicokotlinformedics.ui.chat
 
 import android.Manifest
+import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.core.widget.addTextChangedListener
@@ -85,11 +88,16 @@ class ChatFragment : Fragment() {
             }
         }
 
+        viewModel.finalizeState.observe(viewLifecycleOwner){
+            if(it) disable()
+        }
+
         viewModel.consultData.observe(viewLifecycleOwner){
             if(it != null){
                 binding.chatSubj.text = it.title
                 binding.chatBody.text = it.body
                 binding.chatUser.text = it.userName
+
                 if(it.imgUrl != null){
                     binding.chatImg.visibility = View.VISIBLE
                     Picasso.get().load(it.imgUrl).into(binding.chatImg)
@@ -102,6 +110,8 @@ class ChatFragment : Fragment() {
                 peerName = it.userName
 
                 binding.chatVideochat.isEnabled = true
+
+                if(it.finished) disable()
             }
         }
 
@@ -118,6 +128,10 @@ class ChatFragment : Fragment() {
             viewModel.checkMessage(it.toString())
         }
 
+        binding.chatFinish.setOnClickListener{
+            getFinalizeDialog()?.show()
+        }
+
         binding.chatVideochat.setOnClickListener{
             if(!checkPermissions()){
                 requestPermission.launch(permissions)
@@ -130,6 +144,28 @@ class ChatFragment : Fragment() {
         viewModel.getConsultData(consultId)
         binding.chatMsgSend.isEnabled = false
         return binding.root
+    }
+
+    private fun disable(){
+        binding.chatMsgField.isEnabled = false
+        binding.chatMsgImg.isEnabled = false
+        binding.chatMsgSend.isEnabled = false
+        binding.cardView.visibility = View.GONE
+
+        binding.chatVideochat.isEnabled = false
+        binding.chatFinish.isEnabled = false
+    }
+
+    private fun getFinalizeDialog(): AlertDialog?{
+        val builder: AlertDialog.Builder? = AlertDialog.Builder(requireContext())
+        builder?.setMessage(R.string.chat_finish_message)
+        builder?.setPositiveButton(R.string.chat_finish_yes) { _, _ ->
+            viewModel.finalizeConsult(consultId)
+        }
+        builder?.setNegativeButton(R.string.chat_finish_no) { _, _ ->
+        }
+
+        return builder?.create()
     }
 
     private fun launchVideochat(){

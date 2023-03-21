@@ -8,4 +8,5 @@ data class ConsultData(
     val imgUrl: String,
     val userId: String,
     val medicId: String,
+    val finished: Boolean
 )

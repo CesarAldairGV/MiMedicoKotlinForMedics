@@ -80,4 +80,8 @@
     <string name="chat_message">Message</string>
     <string name="chat_username_text">User: </string>
 
+    <string name="chat_finish_message">The chat and videochat will be not usable ¿Are you sure to finish the Consult?</string>
+    <string name="chat_finish_yes">Yes</string>
+    <string name="chat_finish_no">No</string>
+
 </resources>

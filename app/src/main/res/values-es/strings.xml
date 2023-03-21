@@ -80,4 +80,8 @@
     <string name="chat_message">Mensaje</string>
     <string name="chat_username_text">Usuario: </string>
 
+    <string name="chat_finish_message">Ya no se podra enviar mensaje ni usar el videochat ¿Estas Seguro de querer finalizar la asesoria?</string>
+    <string name="chat_finish_yes">Si</string>
+    <string name="chat_finish_no">No</string>
+
 </resources>
